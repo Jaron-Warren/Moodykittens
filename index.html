@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moody Kittens | CodeWorks</title>
+  <link rel="shortcut icon" href="moody-logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="bg-dark d-flex align-items-center p-1 space-between">
+    <img src="moody-logo.png" height="60" alt="Moody Kittens">
+    <form class="" id="nameForm" onsubmit="addKitten(event)">
+      <div class="d-flex">
+        <input placeholder="Name" type="text" name="name" />
+        <button class="btn-special" type="submit">
+          /ᐠ｡ꞈ｡ᐟ\
+        </button>
+      </div>
+    </form>
+  </header>
+  <audio id="meow1" src="./audio/meow1.wav"></audio>
+  <audio id="meow2" src="./audio/meow2.mp3"></audio>
+  <audio id="meow3" src="./audio/meow3.wav"></audio>
+  <audio id="manmeow" src="./audio/manmeow.mp3"></audio>
+  <main class="container">
+    <div class="p-2">
+    <div id="welcome" class="d-flex justify-content-center">
+      <div class="card p-2 text-center">
+        <img src="moody-logo.png" height="250" alt="Moody Kittens">
+        <div class="mt-2">
+          <b id="welcomeTitle" class="text-center">Hello Cat Wrangler !</b>
+          <p id="welcomePhrase">Catch your cats and don't let them escape!</p>
+          <small id="status"></small>
+          <br>
+          <small id="pettingStatus"></small>
+          <br>
+          <button onclick="getStarted()">Alright let's go!</button>
+          <br>
+          <button class="btn-cancel" onclick="startOver()">Reset</button>
+        </div>
+      </div>
+    </div>
+    <img class="hidden winning" src="moody-win.jpg" id="moodyWin" alt="You Win!!!!!">
+      <div id="kittens" class="d-flex flex-wrap">
+
+      </div>
+    </div>
+  </main>
+  <footer class="sticky card bg-dark text-light p-1 d-flex align-items-center justify-content-center">
+    <div id="footer">
+      <small>Created with <span style="color: var(--primary)">&hearts;</span> by kittens"R" us</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
